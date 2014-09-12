@@ -6,7 +6,6 @@ body{
 	position: relative;
 }
 .main{
-	background-color: white;
 	margin-top: 110px;
 	padding-left: 100px;
 	min-width: 1200px;
@@ -16,6 +15,7 @@ body{
 	margin: 0 auto;
 	position: absolute;
 	bottom: 0;
+	float: left;
 }
 .ryu-ready, .ryu-still, .ryu-throwing {
 	width: 659px;
@@ -39,11 +39,11 @@ body{
 
 .hadouken {
   background-image: url('../images/hadouken.gif');
-  width: 156px; 
-  height: 90px;
-  /*display: none;*/
-  position: relative;
-  top: 0px;
-  left: 0px;
-  float: left;
+	width: 156px;
+	height: 90px;
+	display: none;
+	position: relative;
+	top: 167px;
+	left: -212px;
+	float: left;
 }

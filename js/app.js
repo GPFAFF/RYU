@@ -13,7 +13,7 @@ $(document).ready(function() {
     $('.ryu-throwing').show();
     $('.hadouken').finish().show()
     .animate(
-      {'left': '300px'},
+      {'left': '400px'},
       500,
       function() {
         $(this).hide();
@@ -32,3 +32,10 @@ function playHadouken () {
   $('#hadouken-sound')[0].load();
   $('#hadouken-sound')[0].play();
 }
+
+$(document).keypress("x", function(x) {
+	if(x.ctrlKey)
+		alert("X was pressed")
+});
+
+
