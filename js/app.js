@@ -33,9 +33,20 @@ function playHadouken () {
   $('#hadouken-sound')[0].play();
 }
 
-$(document).keypress("x", function(x) {
-	if(x.ctrlKey)
-		alert("X was pressed")
-});
 
+$(document).keypress(function(e) {
+	if(e.keyCode == 120) {
+    event.preventDefault();
+    $('.ryu-cool').show();
+    $('.ryu-action').hide();
+    $('.ryu-still').hide();
+    $('.ryu-throwing').hide();
+    console.log("x was pressed");
+  }
+
+ 
+
+ });
+
+		
 
