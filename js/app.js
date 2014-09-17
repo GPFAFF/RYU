@@ -27,25 +27,32 @@ $(document).ready(function() {
   });
 });
 
+// ryu hadouken sound
+
 function playHadouken () {
   $('#hadouken-sound')[0].volume = 0.5;
   $('#hadouken-sound')[0].load();
   $('#hadouken-sound')[0].play();
 }
 
+// ryu cool move 
 
-$(document).keypress(function(e) {
-	if(e.keyCode == 120) {
-    event.preventDefault();
-    $('.ryu-cool').show();
-    $('.ryu-action').hide();
-    $('.ryu-still').hide();
-    $('.ryu-throwing').hide();
-    console.log("x was pressed");
-  }
-
- 
-
+$(document).ready(function(){
+  $(document).keydown(function(e) {
+    if (e.keyCode == 88) {
+      $(".ryu-ready").hide();
+      $(".ryu-cool").show();
+      $(".ryu-throwing").hide();
+      $(".ryu-still").hide();
+    }
+  }).keyup(function(e) {
+    if (e.keyCode == 88) {
+      $(".ryu-cool").hide();
+      $(".ryu-still").hide();
+      $(".ryu-thorwing").hide();
+      $(".ryu-ready").show();
+    }
+  });
  });
 
 		
